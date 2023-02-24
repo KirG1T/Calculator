@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    box-sizing: border-box;
+    background-color: #807ece;
+    border: none;
+    font-family: Rubik, sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 356px;
+    margin: calc((100vh - 589px) / 2) auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2a37;
+    border-radius: 48px;
+}
+
+.calculating {
+    width: 100%;
+    height: 24px;
+    font-size: 20px;
+    background-color: inherit;
+    color: #6b6b6b;
+    text-align: end;
+    padding-right: 45px;
+    margin-top: 50px;
+}
+
+.result {
+    width: 100%;
+    font-size: 36px;
+    padding: 7px 0;
+    text-align: end;
+    color: #ebebeb;
+    background-color: inherit;
+    padding-right: 45px;
+}
+
+.buttons-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto repeat(5, 1fr);
+    gap: 12px;
+    justify-items: center;
+    background-color: inherit;
+    margin: 23px;
+}
+
+.buttons-area > button:nth-child(-n + 2) {
+    grid-column: 1;
+}
+
+.buttons-area > button:first-child {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.buttons-area > button:nth-of-type(4n + 1) {
+    background-color: #462878;
+}
+.buttons-area > button:not(:nth-child(1n + 2)) {
+    background-color: #f6d743;
+    border-radius: 8%;
+    height: 32px;
+    width: 64px;
+}
+.buttons-area > button:nth-of-type(4n + 1):hover {
+    background-color: #7f45e2;
+}
+
+.buttons-area > button:nth-of-type(4n + 1):active {
+    background-color: #4a2985;
+}
+
+.buttons-area > button:not(:nth-child(1n + 2)):hover {
+    background-color: #f1d961;
+}
+
+.buttons-area > button:not(:nth-child(1n + 2)):active {
+    background-color: #beab4d;
+}
+
+button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    color: #ebebeb;
+    border-radius: 50%;
+    background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(255, 255, 255, 0.05) 100%
+        ),
+        #2d2a37;
+    box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01),
+        0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1),
+        0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29),
+        inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+    transition: all linear 0.1s;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+button:active {
+    box-shadow: none;
+    background: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+img {
+    background-color: transparent;
+}

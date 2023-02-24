@@ -11,7 +11,7 @@ const getRes = (
                 currentNum === '0,' ||
                 currentNum === '-0,'
             ) {
-                return 'Cannot divide by zero';
+                return 'Error';
             }
             res = String(
                 Number(prevNum.replace(',', '.')) /

@@ -39,7 +39,7 @@ const calcSquareRoot: CalcFn = ({
 
     if (setCurNum && curNum && !isEqual) {
         if (curNum?.includes('-')) {
-            setCurNum('Invalid input');
+            setCurNum('Error');
         } else {
             setCurNum(
                 String(

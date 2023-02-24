@@ -21,7 +21,7 @@ const mainSettings: CalcFn = ({
         setOperator &&
         setPrevNum &&
         setCurNum &&
-        curNum === 'Invalid input' &&
+        curNum === 'Error' &&
         targetContent
     ) {
         setCurNum(targetContent);
@@ -77,14 +77,14 @@ const mainSettings: CalcFn = ({
             setResult &&
             setAccessZero
         ) {
-            if (result === 'Cannot divide by zero') {
+            if (result === 'Error') {
                 return;
             }
 
             if (
                 (!prevNum && !curNum && operator === null && !isEqual) ||
                 (prevNum && curNum === '0') ||
-                curNum === 'Cannot divide by zero'
+                curNum === 'Error'
             ) {
                 setAccessZero(false);
                 return;

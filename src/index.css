@@ -63,7 +63,7 @@
     background-color: #462878;
 }
 .buttons-area > button:not(:nth-child(1n + 2)) {
-    background-color: #f6d743;
+    background-color: #efc700;
     border-radius: 8%;
     height: 32px;
     width: 64px;
@@ -77,11 +77,11 @@
 }
 
 .buttons-area > button:not(:nth-child(1n + 2)):hover {
-    background-color: #f1d961;
+    background-color: #ffec8b;
 }
 
 .buttons-area > button:not(:nth-child(1n + 2)):active {
-    background-color: #beab4d;
+    background-color: #efc700;
 }
 
 button {

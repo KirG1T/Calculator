@@ -11,7 +11,7 @@ const calcResult: CalcFn = ({
     setResult,
     result,
 }) => {
-    if (result === 'Cannot divide by zero' || curNum === 'Invalid input') {
+    if (result === 'Error' || curNum === 'Error') {
         return;
     }
 
@@ -24,7 +24,7 @@ const calcResult: CalcFn = ({
         setPrevNum &&
         setCurNum
     ) {
-        if (getRes(operator, prevNum, curNum) === 'Cannot divide by zero') {
+        if (getRes(operator, prevNum, curNum) === 'Error') {
             setIsEqual(true);
             setPrevNum('');
             setCurNum('');

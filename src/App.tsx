@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import setImages from './logic/setImages';
 import { SignType } from './logic/types';
+import setImages from './logic/setImages';
+import setAlts from './logic/setAlts';
 import {
     mainSettings,
     operatorSelection,
@@ -281,7 +282,7 @@ const App: React.FC = () => {
                         data-value={sym}
                     >
                         {Number.isNaN(+sym) ? (
-                            <img src={setImages(sym)} alt="divide" />
+                            <img src={setImages(sym)} alt={setAlts(sym)} />
                         ) : (
                             sym
                         )}
